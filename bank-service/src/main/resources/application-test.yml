@@ -1,0 +1,78 @@
+#datasource
+datasource.ip_port: 192.168.11.9:3306
+datasource.username: root
+datasource.password: 123456
+#MQ
+alimq.producerId: PID_TEST_YJHL_WALLET
+alimq.accessKey: LTAIiQkq2SQwKzpZ
+alimq.secretKey: DVwe3zJXkuErhqpXPUh18XUpyjFCbJ
+alimq.topic: TEST_YJHL_MESSAGE_BUS_POOL
+
+yibao:
+  minLimit: 0.01 #提现最小金额限制
+  preFlag: false #是否放款的标志、生产环境设置为true
+  productName: 理财产品
+#  merchantAccount: 10000449592
+#  merchantPublicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCFWx4BiuHS7qEJE73RCeKMwCsYYH6MgDie9jxua9f35svNwg+Ies+bLjYvikexHAmZm4KsZtaOivW88sGaZ65Wl/YHmO+LxJbEI6ZAjLCgwFDxWoIneP7QuG8XhXzgJs4EHRilR3Z/uKQarxthHV12miv7iMZeq38pXLj1cpoT0wIDAQAB
+#  merchantPrivateKey: MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAIVbHgGK4dLuoQkTvdEJ4ozAKxhgfoyAOJ72PG5r1/fmy83CD4h6z5suNi+KR7EcCZmbgqxm1o6K9bzywZpnrlaX9geY74vElsQjpkCMsKDAUPFagid4/tC4bxeFfOAmzgQdGKVHdn+4pBqvG2EdXXaaK/uIxl6rfylcuPVymhPTAgMBAAECgYB1VnwrfUlAcQmu0/kD8r+tevUwaM9Qzw2DCUSZIDkSfrg63pMOUolTkLDK2dBFDVeBGi07hu0o1SpuS+d/9dSWQld0VQMn5wVCxLAiWCs1RL9d9lMszAEDNbdAL+CN68X4Ve89uqRJ/qvOZOkhDZu5kS05CpjsA/pKgv/ce9hHuQJBANXHRvPAqfHSJvMa2qdAYrivWU7fTctWFLbqdhrg7EuGuMcl0WxcKzH2eHIofar8fXeLX39I0TAip0nYl+ML67UCQQCfsaVxWJvW2yQBsPAQPJC6UM5vMJnVhGfSd4e6s8H5PsLeMTZFEC3GQZvTCO0M6qA+scV64NH0x04vMIIpKAZnAkAUXvHm5lQLZBAsGEH/sAX4PVVQS70ZBDHjIEJy2z4JEGRpLbRgFARVtXvSvQMEmRzHmHNYKLMuWA8C3W3Tx94FAkEAl99DvzsM4lYAtVcHx/lBjt/Ao8At3QESF/gzbhz8kcTdYKCewymyzsSgpB/uCYWtplI8xDLBmjBdq8VPVELLawJBALnAOmZ8GUuYH738jp12NH6B3f7o9Wd6l+xdvEJ8JA1/UIQOh2nof2mDR1A7sWTATUmmCAN4y3ThZLTsWv1AYoA=
+#  yeepayPublicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCSp6oYtbBu1E0/tj9pP2zEuXTfgF2vk1wQ7jStNnadm/DZT3TBK8wdQTwMtWILOmeHoSowOPXjNmqmhloE2wwTGWINd1Z2WN2GlU7CgWJL/NGv1iYX3TM5uuN45gYsecoXuVFvzVmYMSdASBjlNQPQzbK0PUc+8zsOl6gK1LU33wIDAQAB
+  merchantAccount: 10015673200
+  merchantPublicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZkUKTawxpMLlDOUjtRsHivwR6C7tKn8galpzJEIPIlNbtA5bUdimFzZ14repAOcxbxBxKLCv91BmSAjDDLGcS1EisNvloCeheVx7Nsivxyt+qVzPWiZZ8vMz5FFI+NckaOsyawQwIqUhHfCsx36P275e+A6tjr9T4gWxIvxsJEwIDAQAB
+  merchantPrivateKey: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJmRQpNrDGkwuUM5SO1GweK/BHoLu0qfyBqWnMkQg8iU1u0DltR2KYXNnXit6kA5zFvEHEosK/3UGZICMMMsZxLUSKw2+WgJ6F5XHs2yK/HK36pXM9aJlny8zPkUUj41yRo6zJrBDAipSEd8KzHfo/bvl74Dq2Ov1PiBbEi/GwkTAgMBAAECgYA9QtVsOagZznYZeyC8hx2RduIyTbvJaTRKZwrkqtHnkniq1GO3HewylHPdUIPCW0xKz1D5xeVGvPX2aSlKssvq+Ccplzc71RU/4JR2HONxaY7cW5wwaXIoDRzJMsYH1l+4jFM8I/VI3la4ymnNeHrKOVJqQSAQFFv9yxQZ10LDAQJBANlid3Ra4+Ik+Fgpp3j25NC1nlRiw/r9hGk3WeI4j4e/WqubtNX/+eAzQlntlpQrEWmFNKGDp9C3uYevCiDGqJcCQQC02LcgTNxlozt7J7A8t5L1xlitWPHqEW9nRxFpudpE/qKdLQ4csqE8tYmqhNCKX31MIxvV/ZPgkBCIImfeSNblAkA3bTnT+xC7qn1/zS8cUqdI5+X00jHyHw3R3gEXAyDllc7CjrLvFZNarPcwArowEUMhSot+2xjAyPePNvw4Gy8FAkA5YJzRYbF3ic+gZlozGWdGFTUjYpn2UqvOz6yFp9LJmySKy7WzgzVG5q4T7OmhTWSamHUHctnNIMgt+QSNcPzFAkEAlicEqNdzv+cAYDbSW9RidgupzqTZttloVyXwaK9LO/0IfQoDw2aHBT5GZwutfxhWoNrNjDVr03JZlOSfAp3IDA==
+  yeepayPublicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClgmT6YqQjNjT/t1fmJpjbXE2e9oKz2+TopIvrjnxUceTJeilb/vE8WuH/W8RgSN+FoE4MHiX4HL+BOONceKAoZRp4sqrPl2pzdGCy6bO+7DAMQ4P3Tme0Ay8Z2QDn88VRBRO3O5d4oY66dJjaBot4BehAGtsFndB7JGlDzqQnowIDAQAB
+  preBindBarkUrl: https://jinrong.yeepay.com/tzt-api/api/bindcard/request  #预绑卡短信地址
+  confirmBindBankcardUrl: https://jinrong.yeepay.com/tzt-api/api/bindcard/confirm #绑卡确认
+  reSendSmsRechargeUrl:  https://jinrong.yeepay.com/tzt-api/api/bindpay/resendsms #重新发短信充值接口接口
+  reSendSmsBindBankUrl: https://jinrong.yeepay.com/tzt-api/api/bindcard/resendsms #重新发短信绑卡接口
+  preRechargeUrl: https://jinrong.yeepay.com/tzt-api/api/bindpay/request  #预充值短信地址
+  confirmRechargeUrl: https://jinrong.yeepay.com/tzt-api/api/bindpay/confirm #充值确认地址
+  bindCardListUrl:  https://jinrong.yeepay.com/tzt-api/api/bindcard/list #绑卡列表查询接口
+  callbackRechargeUrl: https://testxydapi.neafex.com/api/wallet-transaction-pay/v1/n/transaction/yb/callbackRecharge  #充值回调
+  rechargeRecordUrl: https://jinrong.yeepay.com/tzt-api/api/bindpay/record  #充值查询
+  bindCardRecordUrl: https://jinrong.yeepay.com/tzt-api/api/bindcard/record #绑卡查询
+  withdrawRecordUrl: https://jinrong.yeepay.com/tzt-api/api/withdraw/record #提现查询
+  withdrawUrl: https://jinrong.yeepay.com/tzt-api/api/withdraw/request #提现申请
+  callbackWithdrawUrl: https://testxydapi.neafex.com/api/wallet-transaction-pay/v1/n/transaction/yb/callbackWithDraw  #提现回调
+  delBindBankcardUrl: https://jinrong.yeepay.com/tzt-api/api/unbind/request  #解除绑卡
+  validAmountUrl: https://jinrong.yeepay.com/tzt-api/api/withdraw/validamount #商户余额查询
+  yeePayMerId: 10000457067
+  yeePayKey: U26po59182dV8d7654bo24o5z369408u4sQ3To9j6QuopAbo3gwj4h33mro4
+  yeePayUrl: https://www.yeepay.com/app-merchant-proxy/node #网银支付
+  yeePayQueryUrl: https://cha.yeepay.com/app-merchant-proxy/command #网银支付查询
+  yeePayCallBack: https://testxydapi.neafex.com/api/wallet-transaction-pay/v1/n/transaction/yb/yeePayCallback  #网银充值回调
+  merId: 10000450379 #商户号(代付代发) 10000450379(测试) 10015673200(生产)
+  hmacKey: su1KU96573FKlt580404tU6XJDcA004oD2u75cgA33Q2W7I1542xR38XaI3t #秘钥(代付代发)  su1KU96573FKlt580404tU6XJDcA004oD2u75cgA33Q2W7I1542xR38XaI3t （测试) jj5B29tv06iU463w00aU962py02n79UKgx5a070U1xAb6lr216r9q0vb5H3L（生产）
+  accountBalanceQueryUrl: https://cha.yeepay.com/app-merchant-proxy/transferController.action #提现查询(代付代发)
+  transferSingleUrl: http://cha.yeepay.com/app-merchant-proxy/groupTransferController.action #单笔打款(代付代发)
+  accountName: 张三 #(代付代发) 张三 深圳天弘商业保理有限公司
+  accountNumber: 9558820200001234567 #(代付代发) 9558820200001234567 13002101040024147
+  bankName: 农业银行 #(代付代发)  中国农业银行福州市华林支行
+  bankBranchName: 中国农业银行福州市华林支行 #(代付代发)
+  bankCode: ABC #(代付代发)
+  province: 110000 #收款行省份编码(代付代发)
+  city: 110000  #收款行城市编码(代付代发)
+  signUrl: http://192.168.30.130:8088/ #验证签名地址 http://192.168.1.83:8088/
+
+#商户编号
+#父商编
+parentMerchantNo: 10000466938
+#子商编
+merchantNo: 10000466938
+privatekey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDKLgI+64mmJdNg1TwlCPBnNH3b3qfw2TdHVc2uDd4LTyQI8nRr0heFhhdj0OZi6agqekIyzAH/XmO9PdLrTi4YXJXOfiO/dYwKA6gSktRe6FKY4C2WzX1yA4fGfqJMV7RYVoL6In50Hur6rGnavNSQZqbiDJOgy5yokJ14Mey1iMqqqWvADtKN9SqxtbyIxYD/jj/6qLWwmu88wSwSaGdO3wNFgzajsHgRJe9G9IhD0zr5d72HvJGoedq7VaPn3jhIszcPQE6oqbXAddZRGKBehA4WSCjLEl87XH33zZPrxrQlBTHVVGzfxjbB4QvYz0hlEoWh1ntxeDHTfgyhdPQpAgMBAAECggEATmxMSLW6Xe08McpkmwT9ozq0Oy4BvKW1EIGS15nfcEmRc7sAN7Z1k0BxIDGuu91gcqGbvfJuL+0gCQ7LGqTnsmFvZnp9SU3CNTw33ISBxhKdv1jtthodN7Vw3CjQsYYvmThtc7Mfk9FOWk+4e7VVSnHW98XjGbMBIE2AF1heNgeZ40ubdgzuz9+4g4pphjWncPpwcaMfsDZm3JtFyvUp0+LME0CmUqrxvONZAkpFR/PyejGHnIh3ptHzhe/VjNcuIC4PphkCNBakCBCrtohTy0YeeWfDAUTAO4tPXF/JUhlxjPuqR6rpQY/0uQdMAtTpiWHVJar7eGdK81QnuuOFRQKBgQDrklUPM0pkvGG/wREa0bgUI+ki+1/wv7O8X94/8onomJqPpkD8z4hv/Lev/wD5gDcgmgLC36u/XDuhFfVNOmw4eUWenU6pzonroEjhi91AKcRRfzDfOfWg3wPm1J9WQOn5A033tNRydCpVcX/Ot4qDbKcAwLiPNPXXMTn4LUQE/wKBgQDbtmE0KS/kSfjscWJOqwv1XbxckipkxncqIbdiSdU+DzaLd+Vuaco7TLQJRFp7S7WJW4Tz6KBX2UiA7O7ezXY9PwlgXxXiZDDtneXNAqk7DNxmTTZHrF2C7qdU98klppCFiFx9bysGY6lFWofWmg3Pu5IiPqO3iLRPTvZgQOE+1wKBgQC9SCgmfYzyIlfcjtIinY5uSGiEnjz5od9WpiVbdpOPHEdc0zZ2rH6xlPs3ZAuxbm9dN8KuOLC0ovSau50Nv7rDKdZh234gfP9fH7xP1mUhsC25Why30MdnyqpE6GVbFe+qERitx1PI30RAwWDzhZC7hystNK1XDDPZBAnTOvPjmwKBgDFuujX7IkxRnFDOPdkHQNyGp2+Ib0NXJ85x4YmapQCeeZ4tbpBF+vsWidcf6t+crA5oaeRarWC2gUqIhEHapkSnXxuwqQLTmfKMOPzEIYEoppnZu2Gq1Ss1OK60RSxUamWwxWZvUZXRbG8vLCrLZFodkIZl433SowbI9EO5tTPnAoGAJRsy1z95Q1GPkKrFtKivkxZy1k7zJXjM0VWDc7lT9fBnoeGUyt+vuq+lC5i2aiWKJK7pe8MM9QFDGlWPnly+J8jbyMfm99k5oJtCWDfF0or1pAQ4mw0kjL9TvDVXdojgYA+rxSMQ09hwsYukQ4bblrwfBUmRjLN5WibcRzIW5ZA=
+#YOP基础地址
+baseURL: https://open.yeepay.com/yop-center
+#YOP订单创建URI
+tradeOrderURI: /rest/v1.0/std/trade/order
+#YOP单笔订单查询URI
+orderQueryURI: /rest/v1.0/std/trade/orderquery
+
+tradeOrderCallback: http://116.236.167.233:8123/v1/n/bank/yb/tradeOrderCallback
+#拼接url
+#标准收银台
+cashier: https://cash.yeepay.com/cashier/std
+#API收银台
+apicashier: /rest/v1.0/nccashierapi/api/pay
+#出款地址
+paymentURI: /rest/v1.0/balance/transfer_send
+#查询地址
+paymentqueryURI: /rest/v1.0/balance/transfer_query

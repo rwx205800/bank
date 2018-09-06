@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.yj.gyl</groupId>
+	<artifactId>bank-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>gyl-bank</name>
+	<!--<description>${BUILD_NUMBER}</description>-->
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.8.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.yj.wallet</groupId>
+				<artifactId>yj.api.version.mgr</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.yj.gyl</groupId>
+			<artifactId>composer-channel-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yj.gyl</groupId>
+			<artifactId>bank-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hzm</groupId>
+			<artifactId>hcore</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yj</groupId>
+			<artifactId>snowflake-api</artifactId>
+		</dependency>
+		<!-- user api -->
+		<dependency>
+			<groupId>com.yj.user</groupId>
+			<artifactId>api</artifactId>
+		</dependency>
+		<!-- feign head 传递 -->
+		<dependency>
+			<groupId>com.yj.base</groupId>
+			<artifactId>hystrixpatch</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-hystrix</artifactId>
+		</dependency>
+		<!-- feign head 传递 end -->
+		<!--alimq Producer-->
+		<dependency>
+			<groupId>com.yj.base.alimq</groupId>
+			<artifactId>alimq-producer-starter</artifactId>
+		</dependency>
+		<!-- actuator -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- eureka -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
+		<!-- config -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-client</artifactId>
+		</dependency>
+		<!-- security rsa-->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-rsa</artifactId>
+		</dependency>
+
+		<!-- druid -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+		</dependency>
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- mybatis -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+		<!-- swagger2 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+		<!--<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>bcmail</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>bcprov</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>cfcaCert</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>PKIBASE</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>YeePay</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>commons-logging-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>javax</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>common-logging</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>yop</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>YeePay</groupId>
+			<artifactId>yos</artifactId>
+			<version>1.0</version>
+		</dependency>-->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!--<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-resources-docker</id>
+						&lt;!&ndash; here the phase you need &ndash;&gt;
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/gyldocker</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${env.M2_HOME}/gyldocker</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-resources-k8s</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/target/k8sconfig</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${env.M2_HOME}/k8sconfig</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>-->
+		</plugins>
+	</build>
+	<!--<repositories>
+		<repository>
+			<id>releases</id>
+			<name>release</name>
+			<url>http://192.168.10.132:8081/nexus/content/repositories/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>thirdparty</id>
+			<url>http://192.168.10.132:8081/nexus/content/repositories/thirdparty</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<name>snapshot</name>
+			<url>http://192.168.10.132:8081/nexus/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>-->
+
+
+</project>

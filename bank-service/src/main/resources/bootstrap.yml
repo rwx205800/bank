@@ -1,0 +1,62 @@
+## 需要修改维护的配置项集中到文件头，方便管理，以配置环境开头（dev, test,uat,prd等等）再到项细化
+##当前项目的applicationName
+current.application.name: gyl-bank
+##当前项目暴露端口
+current.application.port: 9016
+##eureka地址
+dev.eureka.zone: https://devdiscover.yinpiao.com/eureka
+test.eureka.zone: https://testdiscover.yinpiao.com/eureka
+uat.eureka.zone: http://192.168.30.13:8888/eureka,http://192.168.30.42:8888/eureka
+pre.eureka.zone: https://prediscover.yinpiao.com/eureka
+prd.eureka.zone: http://172.20.6.174:8888/eureka,http://172.20.6.175:8888/eureka
+##config server的id
+configserver.id: configserver
+
+##配置模板
+server:
+  port: ${current.application.port}
+  tomcat.uri-encoding: UTF-8
+
+spring:
+  profiles.active: dev
+  application.name: ${current.application.name}
+  cloud.config.discovery.serviceId: ${configserver.id}
+
+management:
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    appname: ${current.application.name}
+  client.healthcheck.enabled: false
+
+---
+spring.profiles: dev
+eureka.client.serviceUrl.defaultZone: ${dev.eureka.zone}
+
+---
+spring:
+  profiles: test
+  cloud.config.discovery.enabled: false
+eureka.client.serviceUrl.defaultZone: ${test.eureka.zone}
+
+---
+spring:
+  profiles: uat
+  cloud.config.discovery.enabled: true
+eureka.client.serviceUrl.defaultZone: ${uat.eureka.zone}
+
+---
+spring:
+  profiles: pre
+  cloud.config.discovery.enabled: true
+eureka.client.serviceUrl.defaultZone: ${pre.eureka.zone}
+
+---
+spring:
+  profiles: prd
+  cloud.config.discovery.enabled: true
+eureka.client.serviceUrl.defaultZone: ${prd.eureka.zone}

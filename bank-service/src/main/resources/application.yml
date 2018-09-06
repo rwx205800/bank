@@ -1,0 +1,55 @@
+spring:
+  datasource:
+    name: bank
+    url: jdbc:mysql://${datasource.ip_port}/gyl_bank
+    username: ${datasource.username}
+    password: ${datasource.password}
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  alimq:
+    producerId: ${alimq.producerId}
+    accessKey: ${alimq.accessKey}
+    secretKey: ${alimq.secretKey}
+    topic: ${alimq.topic}
+mybatis:
+    typeAliasesPackage: com.yj.gyl.bank.model
+    mapperLocations: classpath:mybatis/*.xml
+
+#商户编号
+#父商编
+yop:
+  parentMerchantNo: ${parentMerchantNo}
+  #子商编
+  merchantNo: ${merchantNo}
+  privatekey: ${privatekey}
+  #YOP基础地址
+  baseURL: ${baseURL}
+  #YOP订单创建URI
+  tradeOrderURI: ${tradeOrderURI}
+  #YOP单笔订单查询URI
+  orderQueryURI: ${orderQueryURI}
+  #网易充值回调
+  tradeOrderCallback: ${tradeOrderCallback}
+  #拼接url
+  #标准收银台
+  cashier: ${cashier}
+  #API收银台
+  apicashier: ${apicashier}
+  #出款地址
+  paymentURI: ${paymentURI}
+  #查询地址
+  paymentqueryURI: ${paymentqueryURI}
